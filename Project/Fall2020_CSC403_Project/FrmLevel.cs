@@ -50,10 +50,7 @@ namespace Fall2020_CSC403_Project
             }
         }
 
-        private Character[] walls;
 
-        private DateTime timeBegin;
-        private FrmBattle frmBattle;
         private static int[] fog_upper_offset = { -1148, -588 };
         private static int[] fog_lower_offset = { -1148, 168 };
         private static int[] fog_left_offset = { -1056, -97 };
@@ -214,13 +211,13 @@ namespace Fall2020_CSC403_Project
             }
 
             // check collision with enemies
-            if (HitAChar(player, enemyPoisonPacket))
+            if (HitAChar(player, enemy1))
             {
-                Fight(enemyPoisonPacket);
+                Fight(enemy1);
             }
-            else if (HitAChar(player, enemyCheeto))
+            else if (HitAChar(player, enemy2))
             {
-                Fight(enemyCheeto);
+                Fight(enemy2);
             }
             if (HitAChar(player, bossKoolaid))
             {
